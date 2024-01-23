@@ -3,11 +3,15 @@ const applyMiddleware = require("./middleware/applyMiddleware");
 const connectDb = require("./db/Connectdb");
 const port = process.env.PORT || 4001;
 const authenticationRoutr = require("./routers/authentication/index")
+const houseRoutr = require("./routers/houses/index")
+const userRoutr = require("./routers/users/index")
 
 const app = express();
 
 applyMiddleware(app);
 app.use(authenticationRoutr)
+app.use(houseRoutr)
+app.use(userRoutr)
 
 app.get("/", (req, res) => {
   res.send("House Hunter is running")
