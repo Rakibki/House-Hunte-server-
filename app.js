@@ -1,11 +1,11 @@
 const express = require("express");
-const applyMiddleware = require("./middleware/applyMiddleware");
-const connectDb = require("./db/Connectdb");
+const applyMiddleware = require("./src/middleware/applyMiddleware");
+const connectDb = require("./src/db/Connectdb");
 const port = process.env.PORT || 4001;
-const authenticationRoutr = require("./routers/authentication/index")
-const houseRoutr = require("./routers/houses/index")
-const userRoutr = require("./routers/users/index")
-const bookingRoutr = require("./routers/bookings/index")
+const authenticationRoutr = require("./src/routers/authentication/index")
+const houseRoutr = require("./src/routers/houses/index")
+const userRoutr = require("./src/routers/users/index")
+const bookingRoutr = require("./src/routers/bookings/index")
 
 const app = express();
 

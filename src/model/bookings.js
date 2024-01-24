@@ -14,6 +14,10 @@ const bookingSchema = new Schema({
     type: String,
     // required: true,
   },
+  ownweEmail: {
+    type: String,
+    // required: true,
+  },
 });
 
 const bookings = model("bookings", bookingSchema);
