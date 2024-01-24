@@ -7,7 +7,7 @@ const applyMiddleware = (app) => {
   app.use(cookieParser())
   app.use(
     cors({
-      origin: ["http://localhost:5173"],
+      origin: ["http://localhost:5173", "flowery-thread.surge.sh"],
       credentials: true,
     })
   );
